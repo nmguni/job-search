@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card, Badge, Button, Collapse } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
+import "./App.scss";
 
 export default function Job({ job }) {
   const [open, setOpen] = useState(false);
@@ -19,10 +20,10 @@ export default function Job({ job }) {
             <Card.Subtitle className="text-muted mb-2">
               {new Date(job.created_at).toLocaleDateString()}
             </Card.Subtitle>
-            <Badge variant="secondary" className="mr-2">
-              {job.type}
+            <Badge className="mr-2 job-info">{job.type}</Badge>
+            <Badge className="job-info" variant="secondary">
+              {job.location}
             </Badge>
-            <Badge variant="secondary">{job.location}</Badge>
             <div style={{ wordBreak: "break-all" }}>
               <ReactMarkdown source={job.how_to_apply} />
             </div>
@@ -37,7 +38,7 @@ export default function Job({ job }) {
         <Card.Text>
           <Button
             onClick={() => setOpen((prevOpen) => !prevOpen)}
-            variant="primary"
+            className="details-btn"
           >
             {open ? "Hide Details" : "View Details"}
           </Button>

@@ -13,7 +13,7 @@ const ACTIONS = {
 
 const BASE_URL =
   "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
-const PROXY_URL = "https://api.allorigins.win/raw?url=";
+// const PROXY_URL = "https://api.allorigins.win/raw?url=";
 // const PROXY_URL = "https://cors-anywhere.herokuapp.com/";
 
 function reducer(state, action) {

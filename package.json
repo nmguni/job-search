@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
@@ -16,7 +17,6 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "proxy": "lcp --proxyUrl https://jobs.github.com/positions.json",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

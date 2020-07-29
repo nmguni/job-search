@@ -1,0 +1,104 @@
+// Colors
+$bg-color: #f5f5f5;
+$dot-color: rgb(0, 0, 0);
+
+// Dimensions
+$dot-size: 2px;
+$dot-space: 22px;
+#root {
+  background: linear-gradient(
+        90deg,
+        $bg-color ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+    $dot-color;
+  background-size: $dot-space $dot-space;
+}
+.container {
+  max-width: 890px;
+  margin-top: 0px !important;
+  padding-top: 2rem !important;
+}
+.title {
+  background: aquamarine;
+  text-align: center;
+  padding: 6px 5.5px;
+  border-radius: 3px;
+  color: #323232;
+  font-weight: bold;
+  border-radius: 3px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 20%;
+}
+.git-logo {
+  height: 50px;
+  opacity: 0.85;
+  padding: 0 12px 0 0;
+}
+.card {
+  border: none;
+  transition: box-shadow 1s;
+  &:hover {
+    -webkit-box-shadow: 1px 0px 13px 0px aquamarine;
+    box-shadow: 1px 0px 13px 0px aquamarine;
+  }
+}
+//      ---  search form   ---      //
+.form-label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.form-check-label {
+  font-weight: bold;
+  // font-size: 1.2rem;
+}
+
+//      ---  pagination btn   ---      //
+.page-item.active .page-link {
+  background-color: #364f6b;
+  border-color: #364f6b;
+  /* margin: 2.5px; */
+  border-radius: 3px !important;
+}
+.page-item:last-child .page-link {
+  border-radius: 3px;
+}
+.page-item {
+  margin: 3.5px;
+}
+
+.page-link {
+  border: none;
+  color: #000;
+}
+.input-box {
+  border: none;
+}
+//      ---  jobs card  ---      //
+.card-title {
+  font-weight: bold;
+}
+.job-info {
+  color: white;
+  background-color: #278ea5;
+}
+.details-btn {
+  color: #fff;
+  background-color: #364f6b;
+  border-color: #364f6b;
+}
+.job-link {
+  color: #278ea5;
+}
+.button {
+  background-color: #364f6b;
+  font-weight: 800;
+  border-radius: unset;
+}

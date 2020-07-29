@@ -4,6 +4,8 @@ import { Container } from "react-bootstrap";
 import Job from "./Job";
 import JobsPagination from "./JobsPagination";
 import SearchForm from "./SearchForm";
+import "./App.scss";
+import logo from "./images/github-logos/GitHub-Mark-64px.png";
 
 function App() {
   const [params, setParams] = useState({});
@@ -21,7 +23,10 @@ function App() {
 
   return (
     <Container className="my-4">
-      <h1 className="mb-4">GitHub Jobs</h1>
+      <h1 className="mb-4 title">
+        {" "}
+        <img className="git-logo" src={logo} alt="github logo" /> JOBS API
+      </h1>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage} />
       {loading && <h1>Loading...</h1>}

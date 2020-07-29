@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Col } from "react-bootstrap";
+import "./App.scss";
 
 export default function SearchForm({ params, onParamChange }) {
   return (
@@ -12,6 +13,7 @@ export default function SearchForm({ params, onParamChange }) {
             value={params.description}
             name="description"
             type="text"
+            className="input-box"
           />
         </Form.Group>
         <Form.Group as={Col}>
@@ -21,6 +23,7 @@ export default function SearchForm({ params, onParamChange }) {
             value={params.location}
             name="location"
             type="text"
+            className="input-box"
           />
         </Form.Group>
         <Form.Group as={Col} xs="auto" className="ml-2">
@@ -29,7 +32,7 @@ export default function SearchForm({ params, onParamChange }) {
             value={params.full_time}
             name="full_time"
             id="full-time"
-            label="Only Full Time"
+            label="Full Time"
             type="checkbox"
             className="mb-2"
           />
